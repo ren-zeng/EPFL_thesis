@@ -18,13 +18,13 @@
 \begin{document}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt} %(needs to be before titlepage and frontmatter to keep the table of contents lists short)
-\frontmatter
-\input{head/titlepage.tex}
-\include{head/dedication}
-\setcounter{page}{0}
-\include{head/acknowledgements}
-\include{head/preface}
-\include{head/abstracts}
+% \frontmatter
+% \input{head/titlepage.tex}
+% \include{head/dedication}
+% \setcounter{page}{0}
+% \include{head/acknowledgements}
+% \include{head/preface}
+% \include{head/abstracts}
 
 \cleardoublepage
 \pdfbookmark{\contentsname}{toc}
@@ -54,12 +54,47 @@
 \mainmatter
 \include{main/ch1_introduction}
 \cleardoublepage
-\part{Body 1}
-\include{main/ch2_figures_tables}
+\part{Theory and Background}
+\chapter{Core Phenomena in Tonal Music}
+    \section{Structured Tonal Motion}
+    \section{Polyphony}
+    \section{Musical Time}
+    \section{Repetition}
+\chapter{Models of Tonal structure}
+    \section{grammar}
+    \section{Interpreting syntax as type}
+\chapter{Outlook}
+    \section{A holistic model of tonal music}
+%\include{main/ch2_figures_tables}
 \cleardoublepage
-\part{Body 2}
-\include{main/ch3_math}
-\include{main/ch4_more_text}
+\part{A Process Algebra For Metered Polyphony}
+\chapter{Tonal motion as hierarchical Processes}
+    \section{Stationary and Transitory Processes}
+    \section{Temporal abstractions}
+    \section{Spatial abstractions}
+    \section{Reinterpretation of existing theories under this framework}
+
+\chapter{Timely processes}
+    \section{Hierarchical Pulses}
+    \section{Temporal relations of processes}
+    \section{}
+
+\part{Structural Repetition}
+    \section{Templates as Higher-order Functions: Coordinating Syntax and Repetition}
+        \section{Composable templates}
+        \section{Templates of templates}
+    \section{Various Types of Structural Repetition}
+        \subsection{Exact Repetition}
+        \subsection{Surface Variation}
+        \subsection{Reinterpretation}
+        \subsection{Transference}
+    \section{Repetition-Syntax-Material Factorization}
+        \subsection{Cross Domain Translation of Repetition Structure}
+
+%\include{main/ch3_math}
+%\include{main/ch4_more_text}
+\cleardoublepage
+\part{Sampling Metered Polyphony with Repetition Constraint: A Case Study on Galant Music}
 
 % use to end the last part if the thesis is composed of parts
 \addtocontents{toc}{\vspace{\normalbaselineskip}}
@@ -69,12 +104,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%% TAIL: Bibliography, Appendix, CV
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\include{tail/appendix}
-\backmatter
-\include{tail/biblio}
-% Add your glossary here
-% Add your index here
-% Photographic credits (list of pictures&images that have been used with names of the person holding the copyright for them)
-\include{tail/cv}
+% \include{tail/appendix}
+% \backmatter
+% \include{tail/biblio}
+% % Add your glossary here
+% % Add your index here
+% % Photographic credits (list of pictures&images that have been used with names of the person holding the copyright for them)
+% \include{tail/cv}
 
 \end{document}
