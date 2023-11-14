@@ -1,8 +1,8 @@
 # Fdb version 4
-["lualatex"] 1699894820 "/Users/zren/VSCodeProjects/EPFL_thesis/my_thesis.tex" "my_thesis.pdf" "my_thesis" 1699894821 0
+["lualatex"] 1699974882 "/Users/zren/VSCodeProjects/EPFL_thesis/my_thesis.tex" "my_thesis.pdf" "my_thesis" 1699974884 0
   "/Users/zren/Library/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc" 1696321978 127327 0c22a2c7faa4e80fd8c3443dc8dd3208 ""
   "/Users/zren/Library/texlive/2023/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz" 1696321978 365412 a06306c17314b4b032727364f41f3f29 ""
-  "/Users/zren/VSCodeProjects/EPFL_thesis/my_thesis.tex" 1699894818 3641 42f1b1fefa668f29f024b8b0bf4f0e2b ""
+  "/Users/zren/VSCodeProjects/EPFL_thesis/my_thesis.tex" 1699974879 5702 2c5b398c36ffd94f22e3a711fe8e551b ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1246382020 928 2dc8d444221b7a635bb58038579b861a ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1246382020 908 2921f8a10601f252058503cc6570e581 ""
@@ -273,11 +273,11 @@
   "/usr/local/texlive/2023/texmf-var/web2c/luahbtex/lualatex.fmt" 1696320941 11875961 13d0b853c28206630b73c2da47033687 ""
   "head/settings_custom.tex" 1699889157 716 2fa14e15c0994602d152872a046de824 ""
   "head/settings_epfl_template.tex" 1699889896 7492 cdc756ef90bd4f87758f969db7f6989f ""
-  "main/ch1_introduction.aux" 1699894821 1138 b38ba5a55f92fceb387058068db0fb2d "lualatex"
+  "main/ch1_introduction.aux" 1699974883 1138 b38ba5a55f92fceb387058068db0fb2d "lualatex"
   "main/ch1_introduction.tex" 1699888714 164 4ccbc906378cdbcd62fff4f9dcdccfc8 ""
-  "my_thesis.aux" 1699894821 22543 a91a64fccc57d3d0e206b355d07d88f7 "lualatex"
-  "my_thesis.tex" 1699894818 3641 42f1b1fefa668f29f024b8b0bf4f0e2b ""
-  "my_thesis.toc" 1699894821 2958 94cf3cea41d6153c9a3d5668c5546126 "lualatex"
+  "my_thesis.aux" 1699974884 47276 eb0e7c2d2a380222f343da15d94107c9 "lualatex"
+  "my_thesis.tex" 1699974879 5702 2c5b398c36ffd94f22e3a711fe8e551b ""
+  "my_thesis.toc" 1699974884 6563 b5e9f0f40af1d666b44d96224ab7df76 "lualatex"
   (generated)
   "main/ch1_introduction.aux"
   "my_thesis.aux"
