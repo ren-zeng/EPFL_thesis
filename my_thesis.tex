@@ -52,91 +52,31 @@
 %%%%% MAIN: The chapters of the thesis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \mainmatter
-\include{main/ch1_introduction}
+
 \cleardoublepage
 \part{Theory and Background}
-\chapter{Core Aspects of Tonal Compositions}
-    \section{Structured Tonal Motion}
-    \section{Polyphony}
-    \section{Musical Time}
-    \section{Repetition}
+    \include{main/ch1/Core Aspects of Tonal Compositions}
+    \include{main/ch1/Meta-languages for Abstraction and Structure}
+    \include{main/ch1/Constructive Logic and Dependent Type Theory}
+    \include{main/ch1/Outlook}
 
-\chapter{Meta-languages for Abstraction and Structure}
-    \section{Description, Instantiation, and Interpretation} 
-    \section{Grammar and Syntax}
-        \subsection{Grammar of Natural Languages}
-        \subsection{Grammar-Based Music Theory}
-    \section{Combinatory Categorial Grammar}
-    \section{Constructive Logic and Type Theory}
-     
-
-\chapter{Constructive Logic and Type theory}
-    \section{Curry-Howard Correspondence}
-    \section{Composable and Verifiable Derivations}
-    \section{Abstract Context-Free Grammar as Dependent Type}
-    \section{Modular Constructions beyond context-free Languages}
-    \section{Generic Programming}
-    
-\chapter{Outlook}
-    \section{Towards a Wholistic Model of Tonal Music}
-        \subsection{Modular Theories that Work Together}
-        \subsection{Relating General Principles to Style Specific Constraints}
-    \section{Thesis Outline}
 %\include{main/ch2_figures_tables}
 \cleardoublepage
 \part{A Process Algebra For Metered Polyphony}
-\chapter{Tonal Motion as Hierarchical Processes}
-    \section{Difficulties in the Assignment of Dependency Relations Among Entities}
-    \section{Applicability and Inspiration From Existing Process Calculi}
-        \subsection{Algebra of Communicating Processes}
-        \subsection{Communicating Sequential Processes}
-        \subsection{Calculus of Communicating Systems}
-    \section{Stationary and Transitory Processes}
-    \section{Temporal Abstractions}
-    \section{Spatial Abstractions}
-    \section{Connection with Existing Theories}
-
-\chapter{Timely Processes}
-    \section{Difficulties in Combining Tonal Structure and Metrical Structure}
-        \subsection{Coordinating the metrical structure with pitch structure}
-            \subsubsection{Passing Note in a Triple Meter}
-            \subsubsection{Accented Passing Note}
-            \subsubsection{Suspensions}
-            \subsubsection{Interruptions}
-        \subsection{Temporal Proportions: Phrasal expansion and contraction}
-        
-    \section{Temporal relations of processes}
-        \subsection{Perceived vs Interpreted Simultaneity}
-        \subsection{A Non-Linear Topology of Musical Time}
-        \subsection{Modeling Meter as Nested Proportions}
-        \subsection{Modeling Syncopation as Attending the Non-Present}
-    \section{Connection with Existing Theories}
-
+    \include{main/ch2/Tonal Motion as Hierarchical Processes}
+    \include{main/ch2/Timely Processes}
 
 \part{General Structural Repetition}
-    \section{Various Types of Structural Repetition}
-        \subsection{Exact Repetition}
-        \subsection{Surface Variation}
-        \subsection{Reinterpretation}
-        \subsection{Transference}
+    \include{main/ch3/Various Types of Structural Repetition}
+    \include{main/ch3/Existing Formalisms of Repetition}
+    \include{main/ch3/A Formal Model of Structural Repetition}
 
-    \section{Existing Formalism of Repetition}
-        \subsection{Without Syntactical Constraints}
-        \subsection{With Syntactical Constraints}
-
-    \section{A Formal Model of Structural Repetition}
-        \subsection{Typed Holes and Arrows: A Functional Interpretation of Templates}
-        \subsection{Repetition structure as Higher-Order Templates}
-        \subsection{Repetition-Syntax-Material Decomposition}
-        \subsection{Cross-Domain Analogies of Repetition Structure}
-
-%\include{main/ch3_math}
-%\include{main/ch4_more_text}
 \cleardoublepage
 \part{Computational Experiments}
-    \section{Encoding and Generating Instances of Galant Schemata}
-    \section{Sampling Metered Polyphony with Repetition Constraint}
-    \section{Compression by Exploiting Structural Repetition}
+    \include{main/ch4/Encoding and Generating Instances of Galant Schemata}
+    \include{main/ch4/Sampling Metered Polyphony with Repetition Constraint}
+    \include{main/ch4/Compression by Exploiting Structural Repetition}
+
 % use to end the last part if the thesis is composed of parts
 \addtocontents{toc}{\vspace{\normalbaselineskip}}
 \cleardoublepage
