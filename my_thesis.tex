@@ -54,28 +54,79 @@
 \mainmatter
 
 \cleardoublepage
-\part{Theory and Background}
-    \include{main/ch1/Core Aspects of Tonal Compositions}
-    \include{main/ch1/Meta-languages for Abstraction and Structure}
-    \include{main/ch1/Constructive Logic and Dependent Type Theory}
-    \include{main/ch1/Outlook}
+\part{Background}
+\chapter{The phenomenon of syntactic repetition}
+    \section{Motivating examples}
+        \subsection{Making coffee} 
+        \subsection{Comics}
+        \subsection{Classical Chinese poem}
+    \section{Cognitive principles underlying syntactic repetition}
+        \subsection{Compossibility}
+        \subsection{Efficient reuse of computations}
+        \subsection{Minimizing description length}
+
+
+\chapter{Syntactic repetition in tonal music}
+    \section{Hierarchical structure in Music}
+        \subsection{Form, rhythm, harmony}
+    \section{Repetition in Music}
+        \subsection{Exact vs varied}
+        \subsection{Syntactic vs non-syntactic}
+        \subsection{Differentiating reuse and repeat}
+
+
+\chapter{Bayesian model-based reasoning}
+    \section{Generative models}
+    \section{Functional Probabilistic Programming}
+        \subsection{Markov category and probability monads}
+        \subsection{Synthetic probability theory and Quasi-Borel space}
+        \subsection{Bayesian non-parametrics}
+
+
+
 
 %\include{main/ch2_figures_tables}
 \cleardoublepage
-\part{A Process Algebra For Metered Polyphony}
-    \include{main/ch2/Tonal Motion as Hierarchical Processes}
-    \include{main/ch2/Timely Processes}
+\part{Template Grammar}
+\chapter{Deriving template grammar from first principles}
+    \section{Abstraction of composition}
+        \subsection{Tree-substitution grammar}
+    \section{Abstraction of repetition}
+        \subsection{Pattern language}
+    \section{Abstraction of composition with repeat}
+        \subsection{Introducing template grammar}
+        \subsection{Template grammar as a probabilistic program}
+\chapter{Parsing of Template grammar}
+    \section{A polynomial time semi-ring parsing algorithm}
+        \subsection{Parsing as deduction}
+        \subsection{Proof of correctness}
+    \section{Approximate parsing for Template grammar}
+        \subsection{Tree compression}
+        \subsection{A-star parsing}
 
-\part{General Structural Repetition}
-    \include{main/ch3/Various Types of Structural Repetition}
-    \include{main/ch3/Existing Formalisms of Repetition}
-    \include{main/ch3/A Formal Model of Structural Repetition}
+
+    
 
 \cleardoublepage
 \part{Computational Experiments}
-    \include{main/ch4/Encoding and Generating Instances of Galant Schemata}
-    \include{main/ch4/Sampling Metered Polyphony with Repetition Constraint}
-    \include{main/ch4/Compression by Exploiting Structural Repetition}
+\chapter{Pattern discovery in Jazz Harmony Tree Bank}
+    \section{Quantitative results and discussion}
+    \section{Qualitative analysis}
+\chapter{The plausibility of minimal-sized Template as Jazz harmonic analysis}
+    \section{Many-to-one mapping from Template to CFG parse tree}
+    \section{Baselines}
+        \subsection{PCFG}
+        \subsection{PACFG}
+    \section{Quantitative results and discussion}
+    \section{Qualitative analysis}
+\chapter{Inducing Template grammar from Jazz chord progressions}
+    \section{Method 1: Non-parametric Bayesian inference}
+        \subsection{Pitman-Yor process prior}
+    \section{Method 2: A heuristic based on tree compression} 
+        \subsection{Straight-line tree grammar}
+    \section{Comparison between the two methods}
+   
+\chapter{Contributions and conclusions}
 
 % use to end the last part if the thesis is composed of parts
 \addtocontents{toc}{\vspace{\normalbaselineskip}}
