@@ -1,0 +1,247 @@
+\graphicspath{{main/chapter1/Intro: structural repeat/figs/}}
+\section{Defining repeat}
+\begin{comment}
+Section goal: Motivate the notion of structural repeat
+- [requirement 1] This section should be readable for general audience. All examples should be simple, intuitive, and common. 
+- [requirement 2] This section should fully establish why defining repeat as a cognitive phenomenon is nontrivial. 
+- [requirement 3] This section should build up the concept (structural repeats) incrementally, starting from the simplest notion of repeat. Each increment of the concept should highlight the part that is new and explain what additional explanation power it gives. 
+- [requirement 4] This section should only introduce the formal notations only after the reader has understood the nuances of the concept intuitively and verbally. 
+
+Plan: 
+    - intro
+    - First approximation: Equality of the observations 
+        - Can explain: 
+        - Can't explain: Postman example of ``doing the same thing''
+        - Limitation: we sometimes also experience non-exact repeat
+        - Core problem: (Categorization) An entity is characterized by its external properties and affordance.  
+    - Second approximation: Equality of the Abstraction 
+        - e.g. conceptual category, intention, particular features, internal relations
+        Equality of the generative program underlying the observation. (the instantiation of a abstract concept can be subsumed as a generative program)
+        - Invariance? 
+        - Can't distinguish: parralel syntax 
+    - Third approximation: Equality of the Interpretation 
+
+    - Structural repeat
+
+
+
+
+    
+    Extensional vs Intentional equality
+    - Third approximation: Intentional equality of the generative programs underlying the observation
+    https://oecs.mit.edu/pub/vgigt1aq/release/1?from=10215&to=11248
+    https://oecs.mit.edu/pub/vgigt1aq/release/1?from=12735&to=13964
+\end{comment}
+
+% The central topic of this thesis is about the computational modeling of repetitions in music in a cognitively plausible way. 
+% Although repetition in music might be different from other domains, we first focus on the aspects that is generally applicable in other domains. 
+% Repetition is a core feature of our musical experience. Since music is fundamentally a mental phenomenon, perhaps it is helpful to first take a birds-eye-view on how human we experience repetition in general.
+
+We experience repetition in diverse domains: we discern shared narrative structures across novels, films, and music, and we uncover universal laws governing phenomena as distinct as ocean currents and atmospheric dynamics. Moreover, humans can abstract patterns of patterns, as seen in the application of category theory to mathematics and programming. These examples illustrate our remarkable ability to not only detect abstract repetitions but also to productively employ them in navigating both the physical and mental worlds.
+
+Repeat, as we intuitively perceive it, is surprisingly nontrivial to formalize. 
+
+\subsection{Repeated observations}
+Let us first approximate our experience of repeat with a simple characterization: \textbf{a specific observation occurs across time and space}. We can find examples across domains that fit this definition. For instance, an ongoing fire siren corresponds to a repeat of a specific sound across time. The decorative motifs found in mosaic tiling are repeats of a visual symbol across space. The periodic motion of a pendulum contains repeats of a specific movement. To put it formally: 
+
+\begin{equation} 
+    \tag{Approximation 1}
+    \llbracket x_2 \ \emph{repeats}\  x_1  \rrbracket\footnote{We adopt the notation $\llbracket \dots \rrbracket$ from formal semantics as a function that maps a expression to its truth condition}  =\left\{ x_2 = x_1\right\}
+\end{equation}
+
+Our first definition is simple and precise, and its mental processing of can be computationally modelled in a straight forward manner. However, it does not fully capture of our \emph{intuitive experience} of repeat. Consider a postman, when frustrated by his mundane work, complains about ``doing the same thing'' over and over again. Clearly, by ``doing the same thing,'' our imaginary postman does not mean it as repeating a list of concrete physical actions (e.g., turning right on the crossroad at 7:23 am, and stopping his car at the exact same spot). If the postman's job can be just explained as such, imagine the catastrophes caused by a mail robot programmed to do exactly that. 
+
+In order to make the postman's expression work, our model of repeat should allow some degrees of flexibility. For example, there are multiple ways to achieve the same task of ``parking the car'' depending on the situation at hand. What if the closest parking slot is occupied? What if there are kids walking by? What if there are construction works blocking the entire side of the street? "Just do the sensible things" would be a typical response from human. In those scenarios, the observed actions would be adapted to include extra stepping on gas and break, checking the mirrors/traffic lights/pedestrians, looking for available parking slots. Then to our robot friend, in what ground can it understand these "sensible adaptions" of actions as being the ``same''? 
+
+One might try to incorporate this kind of non-exact repeat by proposing some kind of function that measure the similarity/dissimilarity among the instances. For example, one might say if two list of actions both ends with stopping the car and getting out the car, we define a high similarity among them. But there are cases where our experience of repeat is not about the similarity of the observations at all. Consider a cityscape of New York where we find repetitions of buildings. Each building can be very different from the image perspective. 
+% If we go back to visual patterns, we find variations also across instances of repeats. So our "ill-defined" notion of repeat also fails there. So the problem of our definition is just limited to one domain but is a general issue.
+% For visual case, one can potentially measure the pixel-wise L2 distance (MSE). 
+
+The reason we perceive repeat is that we interpret these visuals as concrete instances of the same abstract concept: building, which we know which properties and functions they should have. Thus, the core problem of the first definition is that it describes the phenomenon of the perceived repeat purely as a property of the observations themselves, without involving a mental model that explains and thus predict the observations. This problem can not be fixed without incorporating the mental understanding of the observations in our formulation of repeat.  
+
+\subsection{Repeated abstractions}
+
+If we think of the ``mental understanding'' as the ability to associate a specific token with its category/type, our next approximation of repeat would be ``instantiations of the same category/type''. 
+\begin{equation} 
+    \tag{equal abstraction}
+    \llbracket x_2 \ \emph{repeats}\  x_1  \rrbracket = \left\{ \text{Type}(x_1) = \text{Type}(x_2)\right\}
+\end{equation}
+
+By shifting the focus from observations to their abstractions, we can explain the postman's notion of ``doing the same thing'' as multiple instantiations of abstract action ``parking the car'' or ``inserting mail to mailboxes'' on different situation-encoding parameters such as ``the location of the next closest parking slot'' and ``whether there are objects blocking the path''. In the case of New York's cityscape, each appearance of the buildings can be thought of as an instantiated token from the type ``building'' using different configurations such as the building's height, style, year, and the angle facing the viewer, etc. 
+
+Despite the generality of the approach, it may sometimes ignore too much information for our experience of repeat. Take the following exerpt from a Chinese poem for example, despite the different in the concrete words, we see a clear parallelism (as a form of repeat) in the two phrases. Is it the abstraction that is repeated? Technically yes, since each of the two phrases can be understood syntactically as a noun phrase. But something very important is missing if we simply say these two phrases contains repeat just because they are both noun phrases. If we substitute the second phrase with any other noun phrase, our previous experience of parallelism imediatelly disappear. One can notice that their are some correpondence between the structure of this two phrases. In term of grouping, ``[bright] [moon]'' correponds to ``[clear] [spring]'' and ``[pine] [among] [shine]'' correponds to ``[stone] [on] [flow]''. Not only each of the corresponding character are from same syntactic category, the syntactic structures of the two phrases are identitcal as demonstrated in Figure \ref{fig: Chinese poem}. Furthermore, the meaning of the correponding words all aims to convey a feeling of serenity.  
+\begin{figure}
+    \centering 
+    \includegraphics[width=0.8\linewidth]{chinese peom surface}
+    \caption{Exerpts from the poem () written by Wang Wei (699–761 during Tang dynasty), translated by Xu Yuanchong}
+    % %Such kind of parallel is not an incident but almost a requirement in Tang poetry, which support human's ability the both recognize and generalize such patterns.}
+    \label{fig: Chinese poem surface}
+\end{figure}
+
+\subsection{Repeated interpretations}
+
+% Perhaps a more general way to expressive our experience of repeat is \textbf{the reoccurrence of some invariance of interest underlying the observations}. 
+
+
+
+
+
+% A natural next step of our approximation is: \textbf{outputs of the same program on given different inputs}. Here an important distinction is made: we test the equality of the programs instead of equality of their outputs. With this modification of our approximation, we can explain the postman's notion of ``doing the same thing'' as calling the same functions ``parking the car'' or ``inserting mail to mailboxes'' on different situation-encoding parameters such as ``the location of the next closest parking slot'' and ``whether there are objects blocking the path''. The output of these functions results in concrete actions, which are different on the face value. More precisely, if we have two observations $y_1$ and $y_2$, we say they are repeated if there exist a function $f$ and input parameters $x_1$ and $x_2$ such that $y_1 = f(x_1), y_2 = f(x_2)$.
+
+
+% \begin{equation} 
+%     \tag{Approximation 2}
+%     \llbracket y_2 \ \emph{repeats}\  y_1  \rrbracket = \left\{ \exists f\ x_1\ x_2,\quad  f(x_1)=y_1 \wedge  f(x_2) = y_2\right\}
+% \end{equation}
+
+
+
+\subsection{Repetition within a structure}
+
+
+
+So far we have only concerned repetition as a \emph{perceived} property of observations. 
+
+
+
+\begin{equation} 
+    \tag{Approximation 3}
+    \llbracket y_2 \ \emph{repeats}\  y_1  \rrbracket = \left\{ \exists R\ x_1' \ x_2' \ x_1\ x_2,\quad  x_1' R x_1 \wedge   x_2' R x_2 \right\}
+\end{equation}
+
+
+% One way to model such flexibility is to see these concrete instances of repeats as \textbf{outputs of the same program (model/function) but given different parameters}. This characterization is fairly simple to model computationally in the generative direction (e.g. as in procedurally generated visual scene), but is much harder the implement in the direction of perception.
+
+% \begin{equation} 
+%     \tag{}
+%     \llbracket y_2 \ \emph{repeats}\  y_1  \rrbracket = \left\{ 
+%         y_1=g(f_1(x_1)) \wedge y_2 = g(f_2(x_2))
+%     \right\}
+% \end{equation}
+
+
+% \begin{table}
+%     \centering
+%     \begin{tabular}{p{0.3\linewidth}  c  c}
+%         Approximations & Examples & Required mechanisms \\
+%         \toprule
+%         The same concrete observation occurs in different time and space.  & e & d\\
+%         \hline
+%         The same model being instantiated with different parameters. & df &\\
+%         \hline
+%         The same relation instantiated with different abstractions of observations. & df &
+%     \end{tabular}
+%     \caption{}
+% \end{table}
+
+% \begin{table}
+%     \centering
+%     \begin{tabular}{l l l}
+%         Notion of equality & non-structural & structural \\
+%         \toprule
+%         Exact  & $\exists f g x_1 x_2, f(x_1) = g(x_2) \wedge f \simeq g$  & $\exists f g x_1 x_2, f(x_1) = g(x_2) \wedge f \equiv g$ 
+%         % \hline
+%         % Non-exact & $\exists f_1 f_2 g_1 g_2 x_1 x_2, f_1(f_2(x_1)) = g_1(g_2(x_2)) \wedge f_1 \simeq g_1$  & $\exists f_1 f_2 g_1 g_2 x_1 x_2, f_1(f_2(x_1)) = g_1(g_2(x_2)) \wedge f_1 \equiv g_1$ 
+
+%     \end{tabular}
+%     \caption{}
+% \end{table}
+
+% \begin{table}
+%     \centering
+%     \begin{tabular}{l p{0.3\linewidth} p{0.3\linewidth}}
+%         $f$, $g$ share the same & upper-level & lower-level  \\
+%         \toprule
+%         formalization  & $\exists f_1 f_2 g_1 g_2, f = f_1 \circ f_2\wedge g = g_1 \circ g_2 \wedge f_1 \equiv g_1$  & $\exists f_1 f_2 g_1 g_2, f = f_1 \circ f_2\wedge g = g_1 \circ g_2 \wedge f_2 \equiv g_2$\\
+%         \hline
+%         examples & variations of K331 (same upper level reduction with different lower level realization) & bach C major prelude (same figuration across phrases with different harmony reduction)
+%         % Non-exact & $\exists f_1 f_2 g_1 g_2 x_1 x_2, f_1(f_2(x_1)) = g_1(g_2(x_2)) \wedge f_1 \simeq g_1$  & $\exists f_1 f_2 g_1 g_2 x_1 x_2, f_1(f_2(x_1)) = g_1(g_2(x_2)) \wedge f_1 \equiv g_1$ 
+%     \end{tabular}
+%     \caption{}
+% \end{table}
+
+% \begin{table}
+%     \centering
+%     \begin{tabular}{p{0.4\linewidth}  p{0.4\linewidth}}
+%         Object & Domain \\
+%         \toprule
+%         {\begin{itemize}
+%             \item Concrete observation
+%             \item Generative program 
+%             \item Relation
+%         \end{itemize}} 
+%         & 
+%         {\begin{itemize}
+%             \item Time
+%             \item Space
+%             \item Levels of abstraction 
+%         \end{itemize}}
+%         % {\begin{itemize} \item Time \item Space \item Levels of abstraction \end{itemize}}\\
+
+%     \end{tabular}
+%     \caption{}
+% \end{table}
+
+
+% \paragraph{Attempt 1: The same concrete observation occurs in different time and space.}
+
+% Required computational mechanisms : 
+%     - production: duplication 
+%     - understanding: equality testing
+% Failed reason: too little flexibility, does not take abstractions into account.
+
+% \paragraph{Attempt 2: The same pattern being instantiated in different time and space.}
+
+% Required Computational mechanisms (given the space of generative function) (on top of attempt 1): 
+%     - production: sampling function parameters, function application
+%     - understanding: 
+
+% \paragraph{Attempt 3: The same groups of relation governing abstractions of observations.}
+
+
+
+
+% \end{document}
+
+\section{Structural Repeat}
+Our experience of repeat can be evalated by structure. In an informal way, we mean ``structure'' as ``how things are put together'' or equivalently, ``how things can be elaborated''. In language, the syntactic structure describes how words can combine to form a correct sentence, the semantic structures describes how meanings can combine to form new meanings. In action planning, structure describes how actions and goals can be broken into smaller components. In music, tonal structure describes how voices and harmony can be prolonged (elaborated through time). 
+
+\subsection{Example 1: Chinese Poetry}
+Parallel syntax is the phenomenon when two phrases have the identical syntactic structure. An example is shown in Figure \ref{fig: Chinese poem}. This kind of repeat is hardly a happy coincidence. It is often the case that the semantic meanings also forms either synonyms or contrast. 
+\begin{figure}
+    \centering 
+    \includegraphics[width=0.8\linewidth]{Chinese poem.png}
+    \caption{A poetry written by Wang Wei (699–761 during Tang dynasty), translated by Xu Yuanchong, exhibiting parallel syntactic structure.} 
+    % %Such kind of parallel is not an incident but almost a requirement in Tang poetry, which support human's ability the both recognize and generalize such patterns.}
+    \label{fig: Chinese poem}
+\end{figure}
+
+\subsection{Example 2: Making coffee}
+Imagine John performed the following list of actions: he measures 18 grams of coffee ground, put these measured coffee ground into a coffee maker, he then measures 150 ml of water, and put the measured water into the coffee maker, then he activates the coffee machine. 
+
+% We can perceive the repetition of this composite actions "measuring x amount of y and put y into the coffee maker". 
+
+The ``structure'' in this example is about the meaning of these actions: what does each action achieve and how does these list of actions accomplish a single goal? (How actions are put together). 
+We analyze this scenario by interpreting an action as a particular way to achieve a goal. To make things simple, goals are interpreted as changes in the state of the world. For example, the overarching goal in this example is that John want to transform his state from "having coffee bean and water supply" into ``having a cup of coffee''. 
+
+Goals can be combined in two general and natural ways, the first is sequential composition (chaining): if we know how to accomplish $x\to z$ and $z\to y$ we can accomplish the goal $x \to y$ by concatenating the two actions (also feeding the result of the action to the next action). The second is parallel composition, if we can accomplish $x_1 \to y_1$ and $x_2 \to y_2$, we can also accomplish $(x_1,x_2) \to (y_1,y_2)$. The tuple notation denotes the conjunction of states. 
+
+\begin{figure}
+    \centering 
+    \includegraphics[width=0.9\linewidth]{coffee.png}
+    \caption{}
+    \label{fig: coffee}
+\end{figure}
+
+\begin{figure}
+    \centering 
+    \includegraphics[width=0.9\linewidth]{coffee rule.png}
+    \caption{}
+    \label{fig: coffee rule}
+\end{figure}
+
+The action of measuring 18 grams of coffee bean is a solution of the goal  ``having a bag of coffee bean \to having 18 grams of coffee bean''
+
+The action of put 
+
+
